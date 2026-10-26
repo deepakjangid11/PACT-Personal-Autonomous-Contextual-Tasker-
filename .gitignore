@@ -7,7 +7,20 @@ wheels/
 *.egg-info
 
 # Virtual environments
-.venv
+.venv/
 
 # Environment variables
 .env
+
+# Logs
+logs/
+
+# Test coverage
+.coverage
+.coverage.*
+htmlcov/
+
+# Test/cache files
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/

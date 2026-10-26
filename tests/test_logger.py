@@ -1,5 +1,5 @@
-from pact.logger import get_logger
-from pact.logger import LOG_FILE
+from pact.logger import LOG_FILE, get_logger
+
 
 def test_logger() -> None:
     logger = get_logger("test_logger")
@@ -13,4 +13,3 @@ def test_logger() -> None:
     assert LOG_FILE.exists()
 
     assert message in LOG_FILE.read_text(encoding="utf-8")
-    
