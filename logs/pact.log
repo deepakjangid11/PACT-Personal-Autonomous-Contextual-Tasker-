@@ -2,3 +2,10 @@
 2026-10-26 16:57:39,888 | INFO | pact.main | PACT is starting...
 2026-10-26 17:02:15,516 | INFO | pact.main | PACT application started
 2026-10-26 17:04:20,548 | INFO | pact.main | PACT application started
+2026-10-26 17:14:11,610 | INFO | pact.app | PACT application started | environment=development
+2026-10-26 17:16:49,363 | INFO | __main__ | PACT application started | environment=development
+2026-10-26 17:20:04,828 | INFO | pact.app | PACT application started | environment=development
+2026-10-26 17:21:41,462 | INFO | pact.app | PACT application started | environment=development
+2026-10-26 17:23:58,341 | INFO | pact.app | PACT application started | environment=development
+2026-10-26 17:27:23,120 | INFO | test_logger | PACT logger test
+2026-10-26 17:27:23,143 | INFO | pact.app | PACT application started | environment=development
