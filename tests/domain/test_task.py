@@ -14,12 +14,30 @@ def test_task_creation() -> None:
     assert task.completed_at is None
 
 
-def test_task_status_can_change() -> None:
+def test_task_can_start() -> None:
     task = Task(description="Open Chrome")
 
-    task.status = TaskStatus.RUNNING
+    task.start()
 
     assert task.status == TaskStatus.RUNNING
+
+
+def test_task_can_be_completed() -> None:
+    task = Task(description="Open Chrome")
+
+    task.start()
+    task.complete()
+
+    assert task.status == TaskStatus.COMPLETED
+    assert task.completed_at is not None
+
+
+def test_task_can_be_cancelled() -> None:
+    task = Task(description="Open Chrome")
+
+    task.cancel()
+
+    assert task.status == TaskStatus.CANCELLED
 
 
 def test_task_priority_can_change() -> None:
@@ -28,19 +46,3 @@ def test_task_priority_can_change() -> None:
     task.priority = TaskPriority.HIGH
 
     assert task.priority == TaskPriority.HIGH
-
-
-def test_task_can_be_completed() -> None:
-    task = Task(description="Open Chrome")
-
-    task.status = TaskStatus.COMPLETED
-
-    assert task.status == TaskStatus.COMPLETED
-
-
-def test_task_can_be_cancelled() -> None:
-    task = Task(description="Open Chrome")
-
-    task.status = TaskStatus.CANCELLED
-
-    assert task.status == TaskStatus.CANCELLED

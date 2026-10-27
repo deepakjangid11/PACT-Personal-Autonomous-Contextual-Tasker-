@@ -27,3 +27,13 @@ class Task:
     priority: TaskPriority = TaskPriority.MEDIUM
     created_at: datetime = field(default_factory=lambda: datetime.now(UTC))
     completed_at: datetime | None = None
+
+    def start(self) -> None:
+        self.status = TaskStatus.RUNNING
+    
+    def complete(self) -> None:
+        self.status = TaskStatus.COMPLETED
+        self.completed_at = datetime.now(UTC)
+
+    def cancel(self) -> None:
+        self.status = TaskStatus.CANCELLED
